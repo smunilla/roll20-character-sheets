@@ -1236,7 +1236,7 @@ on("sheet:opened change:acc_diff change:frame_save_target change:frame_class cha
 						</div>
 						<span class="hp-annotations"></span>
 						<div class="nomarg flex-element" style="background:#000">
-							<label class="autocalc-rolls"> <button type="roll" name="roll_Tech_Attack" class="hase-roll" value="&{template:lancer} {{color=purple}} {{name=Tech Attack}} {{to-hit=[[d20cs0cf0@{net_acc}+@{core_systems}+@{frame_techatk}+@{frame_techatk_bns}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}}">T. ATK
+							<label class="autocalc-rolls"> <button type="roll" name="roll_Tech_Attack" class="hase-roll" value="&{template:lancer} {{color=purple}} {{name=Tech Attack}} {{to-hit=[[d20cs0cf0@{net_acc}+@{core_systems}+@{frame_techatk}+@{frame_techatk_bns}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=@{frame_sensors}}}">T. ATK
 							<span style="font-family:'dicefontd20';position:relative;">0</span></button></label>
 						</div>
 						<span class="hp-annotations"></span>
@@ -1615,6 +1615,54 @@ on("sheet:opened change:acc_diff change:frame_save_target change:frame_class cha
 						</fieldset> <!--frame weapon repeating set-->
 					</div> <!--weapon counter div-->
 				</div> <!--frame weapons block-->
+				<div class="flex-row-wrapper nopad" style="width:515px;"> <!-- tech atk block-->
+					<div class="align-start multi-input border tab-flex-item" style="padding:0px;width:100%"> <!--frame base invade 1-->
+						<div class="flex-element nomarg reactbar" style="padding:0px;width:92%;margin:0px;margin-bottom: 2px;height:25px"  >
+							<button type="roll"  name="roll_Mech_TechAtk_1" class="grit-roll" style="margin:0px" value="&{template:lancer} {{color=purple}} {{name=@{base_techatk_name}}} {{to-hit=[[d20cs0cf0@{net_acc}+@{core_systems}+@{frame_techatk}+@{frame_techatk_bns}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{heat=[[@{base_techatk_heat}]]}} {{range=[[@{frame_sensors}]]}} {{tags=@{base_techatk_tags}}} {{effect=@{base_techatk_effect}}}">TECH ATK 1
+							<span style="font-family:'dicefontd20';position:relative;">0</span></button>
+							<input type="text" class="1x underline" name="attr_base_techatk_name" value="Fragment Signal" />
+						</div>
+						<input type="checkbox" class=" showreaction nomarg" name="attr_base_techatk_shown" style="left:20px;width:15px;height:10px;top:10px;margin-bottom:0px"/>
+						<span class=" showreaction" style="right:800px;left:0px;height:10px;margin-bottom:0px;top:6px"></span>
+						<div class="flex-element wepinputs " style="">
+							<label style="margin-right:0px;width:50px">TAGS</label>
+							<input type="text" class="1x underline" name="attr_base_techatk_tags" value="Quick Tech, Invade" />
+							<label style="margin-bottom:0px;width:45px">HEAT</label>
+							<input type="number" class="underline 1digit" style="width:15px;position:relative;bottom:2px" name="attr_base_techatk_heat" value=2 />
+						</div>
+						<div class="flex-element wepinputs" style="margin-bottom:0px">
+							<label style="width:60px">EFFECT</label>
+						</div>
+						<div class="flex-element wepinputs" style="height:50px;margin:0px">
+							<textarea class=" underline nomarg" name="attr_base_techatk_effect" style="height:50px;border-top:2px solid #c7c7c7;margin-top:0px" placeholder=">ENTRY_AWAIT::invd_data">You feed false information, obscene messages, or phantom signals to your target’s computing core. They become **IMPAIRED** and **SLOWED** until the end of their next turn.</textarea>
+						</div>
+					</div> <!--frame base weapon 1-->
+
+					<div class="techatk-counter-div"> <!--techatk counter div-->
+						<fieldset class="repeating_techatk"> <!--frame techatk repeating set-->
+					<div class="align-start multi-input border tab-flex-item" style="padding:0px;width:505px"> <!--frame techatk 2-->
+						<div class="flex-element nomarg reactbar" style="padding:0px;width:92%;margin:0px;margin-bottom: 2px;height:25px"  >
+							<button type="roll"  name="roll_Mech_TechAtk" class="grit-roll" style="margin:0px" value="&{template:lancer} {{color=purple}} {{name=@{techatk-name}}} {{to-hit=[[d20cs0cf0@{net_acc}+@{core_systems}+@{frame_techatk}+@{frame_techatk_bns}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{heat=[[@{techatk-heat}]]}} {{range=[[@{frame_sensors}]]}} {{tags=@{techatk-tags}}} {{effect=@{techatk-effect} }}"><span class="techatk-counter"></span>
+							<span style="font-family:'dicefontd20';position:relative;">0</span></button>
+							<input type="text" class="1x underline" name="attr_techatk-name"/>
+						</div>
+						<input type="checkbox" class=" showreaction nomarg" name="attr_techatk_shown" style="left:20px;width:15px;height:10px;top:10px;margin-bottom:0px"/>
+						<span class=" showreaction" style="right:800px;left:0px;height:10px;margin-bottom:0px;top:6px"></span>
+						<div class="flex-element wepinputs " style="">
+							<label style="margin-right:0px;width:50px">TAGS</label>
+							<input type="text" class="1x underline" name="attr_techatk-tags" />
+							<label style="margin-bottom:0px;width:45px">HEAT</label>
+							<input type="number" class="underline 1digit" style="width:15px;position:relative;bottom:2px" name="attr_techatk-heat" value=2 />
+						</div>
+						<div class="flex-element wepinputs" style="margin-bottom:0px">
+							<label style="width:60px">EFFECT</label>
+						</div>
+						<div class="flex-element wepinputs" style="height:50px;margin:0px">
+							<textarea class=" underline nomarg" name="attr_techatk-effect" style="height:50px;border-top:2px solid #c7c7c7;margin-top:0px"placeholder=">ENTRY_AWAIT::invd_data"></textarea>
+						</div>
+						</fieldset> <!--frame techatk repeating set-->
+					</div> <!--techatk counter div-->
+				</div> <!--frame techatk block-->
 			</div> <!--frame column 1-->
 			<div class="flex-column-wrapper"> <!--frame column 2-->
 				<div class="border nopad align-start" style="width:315px;min-height:252px;margin-top:5px;margin-left:5px;margin-bottom:5px"><!--frame reactions block-->

@@ -745,8 +745,8 @@ div.sheet-wepinputs input, div.sheet-wepinputs select{
     font-size:14px;
     position:relative;
     bottom:2px;
-    font-weight: normal
-    color:black;
+    font-weight: normal;
+    color: black;
 }
 
 div.sheet-wepinputs{
@@ -998,6 +998,14 @@ textarea
     content:'SYS ' counter(sheet-rep-sys);
 }
 
+.sheet-techatk-counter-div {
+    counter-reset:sheet-rep-techatk 1;
+}
+
+.sheet-techatk-counter::before {
+    counter-increment: sheet-rep-techatk;
+    content:'TECH ATK ' counter(sheet-rep-techatk);
+}
 /*-------------END REPEATING FIELD SETUP-------------*/
 
 /*-------------TAB SETUP-------------*/
