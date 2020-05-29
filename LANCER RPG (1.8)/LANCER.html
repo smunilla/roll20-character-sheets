@@ -1669,7 +1669,9 @@ on("sheet:opened change:acc_diff change:frame_save_target change:frame_class cha
 					<div class="flex-element block-title-top">
 						<label class="section-title">REACTIONS</label>
 					</div>
-					<div class=" nested  testborderjust-center tab-flex-item reactbar" style="margin-left:2px;margin-bottom:0px;margin-top:0px">
+					<div class=" nested  testborderjust-center tab-flex-item reactbar" style="margin-left:2px;margin-bottom:0px;margin-top:5px">
+						<button type="roll"  name="roll_Mech_Base_Reaction_1" class="grit-roll" style="margin:0px" value="&{template:lancer} {{color=teal}} {{name=@{base-reaction-name}}} {{tags=Reaction}} {{effect=**Trigger:** @{base-reaction-trigger}\n\n**Effect:** @{base-reaction-effect}}}">
+							<span style="font-family:'dicefontd20';position:relative;">0</span></button>
 						<input class="1x underline long" type="text" name="attr_base-reaction-name" style="margin-right:2px;padding-bottom:0px;"/>
 						<div class=" just-end-self" style="margin-top:3px;width:50px;height:25px">
 							<input type="checkbox" name="attr_corepower" class="corepower" />
@@ -1696,6 +1698,8 @@ on("sheet:opened change:acc_diff change:frame_save_target change:frame_class cha
 					</div>
 					<fieldset class="repeating_reactions">
 						<div class=" nested just-center tab-flex-item reactbar" style="margin-left:2px;margin-bottom:0px;margin-top:-30px">
+							<button type="roll"  name="roll_Mech_Base_Reaction_1" class="grit-roll" style="margin:0px" value="&{template:lancer} {{color=teal}} {{name=@{reaction-name}}} {{tags=Reaction}} {{effect=**Trigger:** @{reaction-trigger}\n\n**Effect:** @{reaction-effect}}}">
+								<span style="font-family:'dicefontd20';position:relative;">0</span></button>
 							<input class="1x underline long" type="text" name="attr_reaction-name" style="margin-right:2px;padding-bottom:0px;"/>
 							<div class=" just-end-self" style="margin-top:3px;width:50px;height:25px">
 								<input type="checkbox" name="attr_corepower" class="corepower" />
@@ -1793,21 +1797,21 @@ on("sheet:opened change:acc_diff change:frame_save_target change:frame_class cha
 		{{#to-hit}}
 		<div class="sheet-to-hit">
 			<span class="sheet-d20">0</span>{{to-hit}}
-			{{#acc-diff}}<img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/acc.png" /><img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/diff.png" /> {{acc-diff}}{{/acc-diff}}
+			{{#acc-diff}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/acc.png" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/diff.png" /> {{acc-diff}}{{/acc-diff}}
 		</div>
 		{{/to-hit}}
 		<div class="sheet-rng-dmg">
-			{{#range}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/range.png" />{{range}} ] {{/range}}
-			{{#threat}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/threat.png" />{{threat}} ] {{/threat}}
-			{{#cone}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/cone.png" />{{cone}} ] {{/cone}}
-			{{#burst}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/burst.png" />{{burst}} ] {{/burst}}
-			{{#line}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/line.png" />{{line}} ] {{/line}}
-			{{#blast}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/blast.png" />{{blast}} ] {{/blast}}
-			{{#kinetic}}[ {{kinetic}}<img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/kinetic.png" /> ] {{/kinetic}}
-			{{#energy}}[ {{energy}}<img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/energy.png" /> ] {{/energy}}
-			{{#explosive}}[ {{explosive}}<img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/explosive.png" /> ] {{/explosive}}
-			{{#heat}}[ {{heat}}<img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/heat.png" /> ] {{/heat}}
-			{{#burn}}[ {{burn}}<img class="sheet-icon" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/LANCER RPG (1.8)/images/burn.png" /> ] {{/burn}}
+			{{#range}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/range.png" />{{range}} ] {{/range}}
+			{{#threat}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/threat.png" />{{threat}} ] {{/threat}}
+			{{#cone}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/cone.png" />{{cone}} ] {{/cone}}
+			{{#burst}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/burst.png" />{{burst}} ] {{/burst}}
+			{{#line}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/line.png" />{{line}} ] {{/line}}
+			{{#blast}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/blast.png" />{{blast}} ] {{/blast}}
+			{{#kinetic}}[ {{kinetic}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/kinetic.png" /> ] {{/kinetic}}
+			{{#energy}}[ {{energy}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/energy.png" /> ] {{/energy}}
+			{{#explosive}}[ {{explosive}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/explosive.png" /> ] {{/explosive}}
+			{{#heat}}[ {{heat}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/heat.png" /> ] {{/heat}}
+			{{#burn}}[ {{burn}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/burn.png" /> ] {{/burn}}
 			</div>
 		{{#allprops() N/A name tags effect color to-hit acc-diff range threat cone burst line blast kinetic energy explosive heat burn}}
 		<div class="sheet-key">{{key}}</div>
